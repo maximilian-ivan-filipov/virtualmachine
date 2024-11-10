@@ -1,0 +1,12 @@
+
+
+mov eax, 1
+mov ebx, 2
+cmp eax, ebx
+je correct
+
+incorrect:
+    mov eax -7
+correct:
+    mov eax 99
+

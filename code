@@ -1,0 +1,35 @@
+
+var number1 = 4
+var number2 = 7
+
+jmp start
+
+loop:
+   mov ecx, 0 
+inner_loop:
+    inc ecx
+    jmp inner_loop
+
+secret:
+    mov number1, -9
+    mov number2, -7
+    push number1
+    push number2
+    pop ecx
+    pop edx
+    add ecx edx
+    jmp done
+
+start:
+    mov eax, number1
+    mov ebx, number2 
+    add eax, ebx
+    jmp secret
+
+done:
+    mov eax, number1
+    mov ebx, number2
+    jmp loop
+
+
+    
